@@ -13,7 +13,22 @@ a = #num_people
 
 
 def ag():
+	w = num_livestock
+	x = edible_food_fed_to_livestock
+	y = 
 
 def growth_humans():
+	num_births - num_deaths
 	
 def growth_other_species():
+	pass
+	
+def housing():
+	comme = #num_commercial_buildings(empty)
+	commo = #num_commercial_buildings(occupied)
+	rese =
+	reso = 
+
+def waste():
+	pass
+
