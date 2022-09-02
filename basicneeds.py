@@ -1,10 +1,29 @@
 #!/usr/bin/env python3
 
 '''
-algorithms to solve these social issues:
-water,
-food,
-shelter,
+simple maths/data to solve these social issues:
+
+- water > bottled water is sold while many have no clean water
+- food > we throw away 40% of edible food, most grain is to feed our food
+- shelter > more empty homes than homeless, yet new buildings are constructed daily
+
+and thereby solving much social divisiveness based on the bonobos/chimps divergence.
+
+from the perspective of a person trapped in the geographic corporate region called the united states.
+
+this should also spotlight the primitive, depraved, and/or submissive human behaviors of:
+
+- selling/marketing basic needs (dehumanization for profit)
+- serving masters selfishly so YOUR basic needs are met and they leave you alone while it binds others in your caste
+- letting corporate masters promise you 'solutions' with your money
+- <i>still</i> letting corporate masters promise you 'solutions' with your money
+- <strong>STILL</strong> letting corporate masters promise you 'solutions' with your money
+- not understanding that they trade your cheap labor with one another
+- not understanding that 'money' is the arbitrary unit your hour of cheap labor is worth to them
+- buying excess garbage that is not necessary existentially
+- wasteful travel(trips, modding verhicles, wasting energy)
+- fast food instead of growing food, mowing lawns instead of growing food
+
 '''
 
 def water():
@@ -15,7 +34,7 @@ def water():
 	sans_basicService = 785000000
 	surface_dependent = 144000000
 	
-	#using 2019 annual base
+	#using 2019 annual base as sample
 	america = [
 		#sizes
 		{
@@ -41,7 +60,7 @@ def water():
 	am_rpy = {	
 	'al':56.27, 'ak':37.33, 'az':14.71, 'ar': 65.59, 'ca':29.1, 'co':18.86, 'ct':54.24, 'de':41.58, 'fl':52.02, 'ga':47.89, 'hi':70.0,'id':23.34, 'il':49.87, 'in':49.52, 'ia':41.63, 'ks':36.08, 'ky':61.28, 'la':61.9, 'me':49.94, 'md':42.63, 'ma':52.7, 'mi':41.79, 'mn':35.49, 'ms':68.06, 'mo':53.85, 'mt':21.41, 'ne':31.41, 'nv':13.77, 'nh':50.2, 'nj':51.89, 'nm':13.35, 'ny':48.18, 'nc':50.98, 'nd':24.34, 'oh':46.86, 'ok':44.94, 'or':30.01, 'pa':50.75, 'ri':57.13, 'sc':45.71, 'sd':31.42, 'tn':66.87, 'tx':26.87, 'ut':16.94, 'vt':51.41, 'va':46.0, 'wa':33.08, 'wv':48.24, 'wi':44.55, 'wy':18.29}
 	
-	# need to do the rest of the countries/territories
+	# need to do the rest of the countries/territories [by ccTLD]
 	intl_rpy = {
 	'ac':2.43, 'ad':31.98, 'ae':2.1, 'af': 17.01, 'ag':39.1, 'ai':34.86, 'al':54.24, 'am':9.8, 'ao':39.76, 'aq':2.01,'ar':23.26, 'as':113.38, 'at':43.7, 'au':21.02, 'aw':17.78, 'az':17.59,
 	#b
