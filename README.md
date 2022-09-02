@@ -4,7 +4,9 @@ simple maths/data to solve these social issues:
 - food > we throw away 40% of edible food, most grain is to feed our food
 - shelter > more empty homes than homeless, yet new buildings are constructed daily
 and thereby solving much social divisiveness based on the bonobos/chimps divergence.
-from the perspective of a person trapped in the geographic corporate region called the united states.
+
+this is from the perspective of a person trapped in the geographic corporate region called the united states.
+
 this should also spotlight the primitive, depraved, and/or submissive human behaviors of:
 - selling/marketing basic needs (dehumanization for profit)
 - serving masters selfishly so YOUR basic needs are met and they leave you alone while it binds others in your caste
