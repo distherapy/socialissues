@@ -8,7 +8,7 @@ shelter,
 '''
 
 def water():
-	num_gal = '''num_gal water per day per person(to exist healthily[including washing, not just survive)'''
+	num_gal = 3 '''num_gal water per day per person(to exist healthily[including washing, not just survive)'''
 	wastewater_untreated = 80/100 #returns to the ground this way
 	using_safeService = 70/100, 5300000000 #located on premises, available when needed, and free from contamination
 	using_basicService = 90/100, 6800000000 #basic service is an improved drinking-water source within a round trip of 30 minutes to collect water.
@@ -36,7 +36,19 @@ def water():
 	brands = ["3 springs", "3300 artesian water", "365 spring water", "a. l. lee corporation natural spring water", "aafiya water", "aarp west virginia", "abita springs", "absopure distilled water", "absopure drinking water", "absopure natural spring water", "admiral dewey distilled water", "admiral dewey drinking water", "admiral dewey purified water", "adobe springs", "aguazul natural spring water", "alaska chill", "alaska glacier", "alaska glacier cap", "alaska glacierblend", "alaska natural spring water", "albion water", "alcatraz", "alhambra", "alps water", "amelia springs water", "angel fire", "apani", "appalachian springs water", "aquamantra", "aquafina", "aquoforce", "arbutus", "arctic mist", "arrowhead", "artesia", "av-02", "avita", "baccara", "bashas' artesian spring water", "belmont springs", "big bear mountain", "big indian", "bikers' coolant","black mountain spring water", "bonaqa", "brick house farm water", "calistoga mineral water", "calistoga mountain spring water", "calistoga spring water","carolina mountain spring water", "caroline mountain water", "carrabassett", "castle rock", "castle springs", "catskill mountains", "cerebellum h2o", "cherokee bottled water", "claire baie bottled water", "clear mountain", "clearly arctic", "climax ky", "cobb mountain natural spring water", "cole brothers", "colfax", "colorado crystal", "cool luc", "cool springs pure springwater", "country creek", "crystal geyser natural alpine spring water", "crystal geyser natural spring water", "crystal geyser water", "crystal springs", "dannon", "dasani","deep rock", "deep rock crystal drop", "deep rock fontenelle", "deer park maryland", "deer park pennsylvania", "diamond natural spring water", "distillata", "dog water", "drinka", "earth2o", "edins x.o.", "eldorado natural spring water", "english mountain", "evo premium water", "famous crazy natural mineral water", "famous natural deep well mineral water", "famous premium drinking water", "flo first liquid obsession", "food lion drinking water", "fountain natural spring water", "fountainhead", "franklin heritage", "georgia mountain water", "giant filtered drinking water", "giant springs", "glaceau smart water", "glaceau vitamin water", "glenwood inglewood", "grand springs", "great bear", "h2only", "halstead", "harris teeter natural spring water", "hawaii water", "hd2o", "hidden spring", "hillcrest spring water. inc.", "hinckley springs", "hinkley & schmidt", "ice mountain", "idaho ice", "indian hills spring water", "keeper springs", "kentwood springs", "kroger drinking water", "kroger spring water", "laure spring water", "lauré pristine spring water", "le-natures water", "leisure time", "lesage natural wells", "life o2", "loon county", "manitou mineral water", "marin county all natural", "mckenzie mist", "model on a bottle (tm)", "mount olympus", "mountain forest spring water", "mountaineer pure", "mt. mckinley clear", "naturalle mountain spring water", "noah's california spring water", "oasis", "odwalla", "original fountain of youth mineral water", "ozardar", "ozarka", "pagosa springs", "palomar mountain spring water", "panther creek", "paradise bottled water", "parley's canyon", "penta", "pine barrens", "pocono springs pure mountain spring water", "poland spring", "pristine peaks", "pure montana", "pure pride", "purely sedona", "purple parrot", "quibell", "rain", "rocky grove", "saegertown beverage eureka springs", "seven creeks spring water", "shenandoah spring water", "shivar springs", "sierra springs", "silver creek",  "snow valley mountain spring water", "snowbird", "snowline natural water", "sparkletts", "stoneclear springs", "sweet springs natural mountain water", "tennessee mountain pure spring water", "trinity springs", "triton purified drinking water", "utopia", "valentine's pure spring water", "valley of the moon", "vermont pure", "water boy", "west virginia's pride of the mountains", "whispering springs water", "whole foods market 365 distilled water", "whole foods market 365 italian sparkling mineral water", "whole foods market 365 spring water", "wissahickon mountain spring water", "yellowstone headwaters", "zephyrhills"]
 	
 	worldwide_sales = [{"wholesale":19400000000, "retail":34600000000}]
+
+	#precip_na
+	am_rpy = {	
+	'al':56.27, 'ak':37.33, 'az':14.71, 'ar': 65.59, 'ca':29.1, 'co':18.86, 'ct':54.24, 'de':41.58, 'fl':52.02, 'ga':47.89, 'hi':70.0,'id':23.34, 'il':49.87, 'in':49.52, 'ia':41.63, 'ks':36.08, 'ky':61.28, 'la':61.9, 'me':49.94, 'md':42.63, 'ma':52.7, 'mi':41.79, 'mn':35.49, 'ms':68.06, 'mo':53.85, 'mt':21.41, 'ne':31.41, 'nv':13.77, 'nh':50.2, 'nj':51.89, 'nm':13.35, 'ny':48.18, 'nc':50.98, 'nd':24.34, 'oh':46.86, 'ok':44.94, 'or':30.01, 'pa':50.75, 'ri':57.13, 'sc':45.71, 'sd':31.42, 'tn':66.87, 'tx':26.87, 'ut':16.94, 'vt':51.41, 'va':46.0, 'wa':33.08, 'wv':48.24, 'wi':44.55, 'wy':18.29}
 	
+	# need to do the rest of the countries/territories
+	intl_rpy = {
+	'ac':2.43, 'ad':31.98, 'ae':2.1, 'af': 17.01, 'ag':39.1, 'ai':34.86, 'al':54.24, 'am':9.8, 'ao':39.76, 'aq':2.01,'ar':23.26, 'as':113.38, 'at':43.7, 'au':21.02, 'aw':17.78, 'az':17.59,
+	#b
+	#c
+	#d
+	#e	
+	}	
 	
 	
 	
@@ -46,7 +58,6 @@ def ag():
 	if their suffering doesn't sway your pampered, entitled cheeks,
 	then the exponential use and waste of food and water should.
 	'''
-
 	pig = #num_pigs
 	beef = #num_cows
 	hens = #num_chickens
@@ -61,9 +72,6 @@ def ag():
 	num_ac_au = #num_acres_frootable_land_au
 	num_cal_req = #num_calories(to exist healthily, not just survive)
 	
-	#rainfall
-	am_rpy = {	
-	'al':56.27, 'ak':37.33, 'az':14.71, 'ar': 65.59, 'ca':29.1, 'co':18.86, 'ct':54.24, 'de':41.58, 'fl':52.02, 'ga':47.89, 'hi':70.0,'id':23.34, 'il':49.87, 'in':49.52, 'ia':41.63, 'ks':36.08, 'ky':61.28, 'la':61.9, 'me':49.94, 'md':42.63, 'ma':52.7, 'mi':41.79, 'mn':35.49, 'ms':68.06, 'mo':53.85, 'mt':21.41, 'ne':31.41, 'nv':13.77, 'nh':50.2, 'nj':51.89, 'nm':13.35, 'ny':48.18, 'nc':50.98, 'nd':24.34, 'oh':46.86, 'ok':44.94, 'or':30.01, 'pa':50.75, 'ri':57.13, 'sc':45.71, 'sd':31.42, 'tn':66.87, 'tx':26.87, 'ut':16.94, 'vt':51.41, 'va':46.0, 'wa':33.08, 'wv':48.24, 'wi':44.55, 'wy':18.29}
 	
 def growth_humans():
 	num_births - num_deaths
@@ -88,21 +96,9 @@ def housing():
 def waste():
 	pass
 
-def for_user():
-	cnt = input("continent:")
-	tmp = int(input("current average temperature:")
-	sol = int(input("current average hours sun per day:")
-	rpd = int(input("current average rainfall per day:")
-	gnd = input("soil type:")
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+'''
+	tmp =   #"current average temp:"
+	sol =   #"current average hours sun per day:"
+	rpd =   #"current average rainfall per day:"
+	gnd =   #"soil type:"
+'''
