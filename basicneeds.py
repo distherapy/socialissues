@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 '''
 algorithms to solve these social issues:
@@ -93,7 +93,7 @@ def housing():
 	rese = #num_residential_buildings(empty)
 	reso = #num_residential_buildings(occupied)
 
-def waste():
+def waste(): #by industry and country/territory
 	pass
 
 '''
