@@ -3,7 +3,8 @@ simple maths/data to solve these social issues:
 - water > bottled water is sold while many have no clean water
 - food > we throw away 40% of edible food, most grain is to feed our food
 - shelter > more empty homes than homeless, yet new buildings are constructed daily
-and thereby solving much social divisiveness based on the bonobos/chimps divergence.
+
+- thereby solving much social divisiveness based on the bonobos/chimps divergence.
 
 this is from the perspective of a person trapped in the geographic corporate region called the united states.
 
