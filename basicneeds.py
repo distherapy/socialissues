@@ -9,7 +9,7 @@ simple maths/data to solve these social issues:
 
 and thereby solving much social divisiveness based on the bonobos/chimps divergence.
 
-from the perspective of a person trapped in the geographic corporate region called the united states.
+this is from the perspective of a person trapped in the geographic corporate region called the united states.
 
 this should also spotlight the primitive, depraved, and/or submissive human behaviors of:
 
@@ -23,7 +23,6 @@ this should also spotlight the primitive, depraved, and/or submissive human beha
 - buying excess garbage that is not necessary existentially
 - wasteful travel(trips, modding verhicles, wasting energy)
 - fast food instead of growing food, mowing lawns instead of growing food
-
 '''
 
 def water():
@@ -33,28 +32,18 @@ def water():
 	using_basicService = 90/100, 6800000000 #basic service is an improved drinking-water source within a round trip of 30 minutes to collect water.
 	sans_basicService = 785000000
 	surface_dependent = 144000000
-	
 	#using 2019 annual base as sample
-	america = [
-		#sizes
-		{
-		'1oz':12.3, '6oz':12.3, '8oz':12.3, '10oz':12.3, '10.1oz':12.3, '11.15oz':12.3, '12oz':12.3, '14oz':12.3, '16oz':12.3, '16.9oz':12.3, '17oz':12.3, '18oz':12.3, '20oz':12.3, '23oz':12.3,'23.7oz':12.3, '25.3oz':12.3, '30.4oz':12.3, '33.8oz':12.3, '50.7oz':12.3, '101.4oz':12.3, '202.8oz':12.3, '676oz':12.3,'500mL':12.3, '600mL':12.3, '700mL':12.3, '1L':12.3, '1.5L':12.3, '1G':12.3, '5G':12.3},
-		#prices
-		{
+	bottled = {
 		'1oz':12.3, '6oz':12.3, '8oz':12.3, '10oz':12.3, '10.1oz':12.3, '11.15oz':12.3, '12oz':12.3, '14oz':12.3, '16oz':12.3, '16.9oz':12.3, '17oz':12.3, '18oz':12.3, '20oz':12.3, '23oz':12.3,'23.7oz':12.3, '25.3oz':12.3, '30.4oz':12.3, '33.8oz':12.3, '50.7oz':12.3, '101.4oz':12.3, '202.8oz':12.3, '676oz':12.3,'500mL':12.3, '600mL':12.3, '700mL':12.3, '1L':12.3, '1.5L':12.3, '1G':12.3, '5G':12.3},
 		
-		#per_capita
-		{	
-		'2009':27.2, '2010':27.8, '2011':28.7, '2012': 30.4, '2013':31.6, '2014':33.6, '2015':35.9, '2016':38.5, '2017':40.6, '2018':42.4, '2019':43.7},
-		
-		#per_state
+		'''#per_state_bil
 		{	
 		'al':27.2, 'ak':27.8, 'az':28.7, 'ar': 30.4, 'ca':31.6, 'co':33.6, 'ct':35.9, 'de':38.5, 'fl':40.6, 'ga':42.4, 'hi':43.7, 'id':27.2, 'il':27.8, 'in':28.7, 'ia':30.4, 'ks':31.6, 'ky':33.6, 'la':35.9, 'me':38.5, 'md':40.6, 'ma':42.4, 'mi':43.7, 'mn':27.2, 'ms':27.8, 'mo':28.7, 'mt':30.4, 'ne':31.6, 'nv':33.6, 'nh':35.9, 'nj':38.5, 'nm':40.6, 'ny':42.4, 'nc':43.7, 'nd':27.2, 'oh':27.8, 'ok':28.7, 'or':30.4, 'pa':31.6, 'ri':33.6, 'sc':35.9, 'sd':38.5, 'tn':40.6, 'tx':42.4, 'ut':43.7, 'vt':27.2, 'va':27.8, 'wa':28.7, 'wv':30.4, 'wi':31.6, 'wy':33.6}
-		]
+		]'''
 		
-	brands = ["3 springs", "3300 artesian water", "365 spring water", "a. l. lee corporation natural spring water", "aafiya water", "aarp west virginia", "abita springs", "absopure distilled water", "absopure drinking water", "absopure natural spring water", "admiral dewey distilled water", "admiral dewey drinking water", "admiral dewey purified water", "adobe springs", "aguazul natural spring water", "alaska chill", "alaska glacier", "alaska glacier cap", "alaska glacierblend", "alaska natural spring water", "albion water", "alcatraz", "alhambra", "alps water", "amelia springs water", "angel fire", "apani", "appalachian springs water", "aquamantra", "aquafina", "aquoforce", "arbutus", "arctic mist", "arrowhead", "artesia", "av-02", "avita", "baccara", "bashas' artesian spring water", "belmont springs", "big bear mountain", "big indian", "bikers' coolant","black mountain spring water", "bonaqa", "brick house farm water", "calistoga mineral water", "calistoga mountain spring water", "calistoga spring water","carolina mountain spring water", "caroline mountain water", "carrabassett", "castle rock", "castle springs", "catskill mountains", "cerebellum h2o", "cherokee bottled water", "claire baie bottled water", "clear mountain", "clearly arctic", "climax ky", "cobb mountain natural spring water", "cole brothers", "colfax", "colorado crystal", "cool luc", "cool springs pure springwater", "country creek", "crystal geyser natural alpine spring water", "crystal geyser natural spring water", "crystal geyser water", "crystal springs", "dannon", "dasani","deep rock", "deep rock crystal drop", "deep rock fontenelle", "deer park maryland", "deer park pennsylvania", "diamond natural spring water", "distillata", "dog water", "drinka", "earth2o", "edins x.o.", "eldorado natural spring water", "english mountain", "evo premium water", "famous crazy natural mineral water", "famous natural deep well mineral water", "famous premium drinking water", "flo first liquid obsession", "food lion drinking water", "fountain natural spring water", "fountainhead", "franklin heritage", "georgia mountain water", "giant filtered drinking water", "giant springs", "glaceau smart water", "glaceau vitamin water", "glenwood inglewood", "grand springs", "great bear", "h2only", "halstead", "harris teeter natural spring water", "hawaii water", "hd2o", "hidden spring", "hillcrest spring water. inc.", "hinckley springs", "hinkley & schmidt", "ice mountain", "idaho ice", "indian hills spring water", "keeper springs", "kentwood springs", "kroger drinking water", "kroger spring water", "laure spring water", "lauré pristine spring water", "le-natures water", "leisure time", "lesage natural wells", "life o2", "loon county", "manitou mineral water", "marin county all natural", "mckenzie mist", "model on a bottle (tm)", "mount olympus", "mountain forest spring water", "mountaineer pure", "mt. mckinley clear", "naturalle mountain spring water", "noah's california spring water", "oasis", "odwalla", "original fountain of youth mineral water", "ozardar", "ozarka", "pagosa springs", "palomar mountain spring water", "panther creek", "paradise bottled water", "parley's canyon", "penta", "pine barrens", "pocono springs pure mountain spring water", "poland spring", "pristine peaks", "pure montana", "pure pride", "purely sedona", "purple parrot", "quibell", "rain", "rocky grove", "saegertown beverage eureka springs", "seven creeks spring water", "shenandoah spring water", "shivar springs", "sierra springs", "silver creek",  "snow valley mountain spring water", "snowbird", "snowline natural water", "sparkletts", "stoneclear springs", "sweet springs natural mountain water", "tennessee mountain pure spring water", "trinity springs", "triton purified drinking water", "utopia", "valentine's pure spring water", "valley of the moon", "vermont pure", "water boy", "west virginia's pride of the mountains", "whispering springs water", "whole foods market 365 distilled water", "whole foods market 365 italian sparkling mineral water", "whole foods market 365 spring water", "wissahickon mountain spring water", "yellowstone headwaters", "zephyrhills"]
-	
 	worldwide_sales = [{"wholesale":19400000000, "retail":34600000000}]
+	
+	brands = ["3 springs", "3300 artesian water", "365 spring water", "a. l. lee corporation natural spring water", "aafiya water", "aarp west virginia", "abita springs", "absopure distilled water", "absopure drinking water", "absopure natural spring water", "admiral dewey distilled water", "admiral dewey drinking water", "admiral dewey purified water", "adobe springs", "aguazul natural spring water", "alaska chill", "alaska glacier", "alaska glacier cap", "alaska glacierblend", "alaska natural spring water", "albion water", "alcatraz", "alhambra", "alps water", "amelia springs water", "angel fire", "apani", "appalachian springs water", "aquamantra", "aquafina", "aquoforce", "arbutus", "arctic mist", "arrowhead", "artesia", "av-02", "avita", "baccara", "bashas' artesian spring water", "belmont springs", "big bear mountain", "big indian", "bikers' coolant","black mountain spring water", "bonaqa", "brick house farm water", "calistoga mineral water", "calistoga mountain spring water", "calistoga spring water","carolina mountain spring water", "caroline mountain water", "carrabassett", "castle rock", "castle springs", "catskill mountains", "cerebellum h2o", "cherokee bottled water", "claire baie bottled water", "clear mountain", "clearly arctic", "climax ky", "cobb mountain natural spring water", "cole brothers", "colfax", "colorado crystal", "cool luc", "cool springs pure springwater", "country creek", "crystal geyser natural alpine spring water", "crystal geyser natural spring water", "crystal geyser water", "crystal springs", "dannon", "dasani","deep rock", "deep rock crystal drop", "deep rock fontenelle", "deer park maryland", "deer park pennsylvania", "diamond natural spring water", "distillata", "dog water", "drinka", "earth2o", "edins x.o.", "eldorado natural spring water", "english mountain", "evo premium water", "famous crazy natural mineral water", "famous natural deep well mineral water", "famous premium drinking water", "flo first liquid obsession", "food lion drinking water", "fountain natural spring water", "fountainhead", "franklin heritage", "georgia mountain water", "giant filtered drinking water", "giant springs", "glaceau smart water", "glaceau vitamin water", "glenwood inglewood", "grand springs", "great bear", "h2only", "halstead", "harris teeter natural spring water", "hawaii water", "hd2o", "hidden spring", "hillcrest spring water. inc.", "hinckley springs", "hinkley & schmidt", "ice mountain", "idaho ice", "indian hills spring water", "keeper springs", "kentwood springs", "kroger drinking water", "kroger spring water", "laure spring water", "lauré pristine spring water", "le-natures water", "leisure time", "lesage natural wells", "life o2", "loon county", "manitou mineral water", "marin county all natural", "mckenzie mist", "model on a bottle (tm)", "mount olympus", "mountain forest spring water", "mountaineer pure", "mt. mckinley clear", "naturalle mountain spring water", "noah's california spring water", "oasis", "odwalla", "original fountain of youth mineral water", "ozardar", "ozarka", "pagosa springs", "palomar mountain spring water", "panther creek", "paradise bottled water", "parley's canyon", "penta", "pine barrens", "pocono springs pure mountain spring water", "poland spring", "pristine peaks", "pure montana", "pure pride", "purely sedona", "purple parrot", "quibell", "rain", "rocky grove", "saegertown beverage eureka springs", "seven creeks spring water", "shenandoah spring water", "shivar springs", "sierra springs", "silver creek",  "snow valley mountain spring water", "snowbird", "snowline natural water", "sparkletts", "stoneclear springs", "sweet springs natural mountain water", "tennessee mountain pure spring water", "trinity springs", "triton purified drinking water", "utopia", "valentine's pure spring water", "valley of the moon", "vermont pure", "water boy", "west virginia's pride of the mountains", "whispering springs water", "whole foods market 365 distilled water", "whole foods market 365 italian sparkling mineral water", "whole foods market 365 spring water", "wissahickon mountain spring water", "yellowstone headwaters", "zephyrhills"]
 
 	#precip_na
 	am_rpy = {	
@@ -68,8 +57,6 @@ def water():
 	#d
 	#e	
 	}	
-	
-	
 	
 def ag():
 	'''
@@ -114,10 +101,3 @@ def housing():
 
 def waste(): #by industry and country/territory
 	pass
-
-'''
-	tmp =   #"current average temp:"
-	sol =   #"current average hours sun per day:"
-	rpd =   #"current average rainfall per day:"
-	gnd =   #"soil type:"
-'''
