@@ -8,7 +8,7 @@ shelter,
 '''
 
 def water():
-	num_gal = 3 '''num_gal water per day per person(to exist healthily[including washing, not just survive)'''
+	num_gal = 3 #num_gal water per day per person(to exist healthily[including washing, not just survive)
 	wastewater_untreated = 80/100 #returns to the ground this way
 	using_safeService = 70/100, 5300000000 #located on premises, available when needed, and free from contamination
 	using_basicService = 90/100, 6800000000 #basic service is an improved drinking-water source within a round trip of 30 minutes to collect water.
@@ -50,6 +50,8 @@ def water():
 	#e	
 	}	
 	
+	with open('/water.xls') as wxls:
+		pass
 	
 	
 def ag():
@@ -88,18 +90,27 @@ def growth_other_species():
 	pass
 	
 def housing():
-	comme = #num_commercial_buildings(empty)
-	commo = #num_commercial_buildings(occupied)
-	rese = #num_residential_buildings(empty)
-	reso = #num_residential_buildings(occupied)
+	commb = #num_commercial_buildings
+	commp = #num_commercial_properties
+	commo = #comm_prop_occupied
+	commv = #comm_prop_vacant
+	resb = #num_residential_buildings
+	resp = #num_residential_properties
+	reso = #res_prop_occupied
+	resv = #res_prop_vacant
+	
 
 def waste():
-	plastic_byCountry = {'us':92.5 'Million Lbs.', : ,
+	plastic_byCountry = {'us':'92.5 Million Lbs.', : ,
 	}
-	plastic_byIndustry = {'packaging':101412640.6 'Million Lbs.', : ,
+	plastic_byIndustry = {'packaging':'101412640.6 Million Lbs.', : ,
 	}
-	plastic_personDaily = {'us': .7 'Lbs.', : ,
+	plastic_personDaily = {'us':'.7 Lbs.', : ,
 	}
+	sewage_byCountryDaily = {'us':'34 Billion Gal', : ,
+	}
+
+
 '''
 	tmp =   #"current average temp:"
 	sol =   #"current average hours sun per day:"
