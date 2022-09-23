@@ -50,15 +50,13 @@ def water():
 	#e	
 	}	
 	
-	with open('/water.xls') as wxls:
+	with open('/water.xls', 'r') as wxls:
 		pass
 	
 	
 def ag():
 	'''
-	farming animals is a problem that can and SHOULD be avoided.
-	if their suffering doesn't sway your pampered, entitled cheeks,
-	then the exponential use and waste of food and water should.
+	farming animals is a problem that can and SHOULD be avoided. if their suffering doesn't sway your pampered, entitled cheeks, then the exponential use and waste of food and water should.
 	'''
 	pig = #num_pigs
 	beef = #num_cows
@@ -74,6 +72,8 @@ def ag():
 	num_ac_au = #num_acres_frootable_land_au
 	num_cal_req = #num_calories(to exist healthily, not just survive)
 	
+	with open('/ag.xls', 'r') as agxls:
+		pass
 	
 def growth_humans():
 	num_births - num_deaths
@@ -86,6 +86,9 @@ def growth_humans():
 	num_hum_sa = #num_people_sa
 	num_hum_au = #num_people_au
 	
+	with open('/growth.xls', 'r') as gxls:
+		pass
+		
 def growth_other_species():
 	pass
 	
@@ -99,6 +102,8 @@ def housing():
 	reso = #res_prop_occupied
 	resv = #res_prop_vacant
 	
+	with open('/housing.xls', 'r') as hxls:
+		pass
 
 def waste():
 	plastic_byCountry = {'us':'92.5 Million Lbs.', : ,
@@ -109,7 +114,9 @@ def waste():
 	}
 	sewage_byCountryDaily = {'us':'34 Billion Gal', : ,
 	}
-
+	
+	with open('/waste.xls', 'r') as wastexls:
+		pass
 
 '''
 	tmp =   #"current average temp:"
