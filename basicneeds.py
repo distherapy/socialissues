@@ -71,13 +71,13 @@ def ag():
 	ls =  pig + beef + goats + sheep #num_livestock
 	fed2ls = 41/100 #edible_food_fed_to_livestock
 	water2ls = 70/100 #potable_water_used_for_ag
-	num_ac_am = 127400000 #num_acres_frootable_land_am
-	num_ac_eu = #num_acres_frootable_land_eu
-	num_ac_af = #num_acres_frootable_land_af
+	num_ac_am = 1274000000 #num_acres_frootable_land_am
+	num_ac_eu = 418000000 #num_acres_frootable_land_eu
+	num_ac_af = 2765109218 #num_acres_frootable_land_af
 	num_ac_as = #num_acres_frootable_land_as
-	num_ac_sa = #num_acres_frootable_land_sa
-	num_ac_au = #num_acres_frootable_land_au
-	num_cal_req = #num_calories(to exist healthily, not just survive)
+	num_ac_sa = 14105600000 #num_acres_frootable_land_sa
+	num_ac_au = 1055139978 #num_acres_frootable_land_au
+	num_cal_req = 3200 #num_calories(to exist healthily, not just survive)
 	
 	with open('/ag.xls', 'r') as agxls:
 		pass
