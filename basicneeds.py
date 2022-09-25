@@ -100,14 +100,16 @@ def growth_other_species():
 	pass
 	
 def housing():
-	commb = #num_commercial_buildings
-	commp = #num_commercial_properties
-	commo = #comm_prop_occupied
-	commv = #comm_prop_vacant
-	resb = #num_residential_buildings
-	resp = #num_residential_properties
-	reso = #res_prop_occupied
-	resv = #res_prop_vacant
+	restc = 2430000 #num_real_estate_businesses
+	commb = 5900000 #num_commercial_buildings
+	bootb = 240000 #num_military_buildings
+	commf = 97000000000 #num_comm_building_sqft
+	commo = 82.8/100 #comm_prop_occupied
+	commv = 17.2/100 #comm_prop_vacant
+	commw = 2400000000000 #comm_property_worth in USD
+	resb = 141950000 #num_residential_buildings
+	reso = 100/(88.4*resb) #res_prop_occupied
+	resv = 100/(11.6*resb) #res_prop_vacant [currently 16+ million]
 	
 	with open('/housing.xls', 'r') as hxls:
 		pass
