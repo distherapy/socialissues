@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+from matplotlib import pyplot
 '''
 algorithms to solve these social issues:
 water,
@@ -127,6 +127,47 @@ def waste():
 	with open('/waste.xls', 'r') as wastexls:
 		pass
 
+def lumber():
+
+	l = open("lumbercountries.txt")
+	countries = []
+	acresdes = []
+	resourcew = []
+	woodw = []
+	
+	done = False
+	while not done:
+		country = l.readline()
+		if country == "":
+			done = True
+		else:
+			line = l.readline()
+			countries.append(country)
+			parts = line.split()
+			
+			acsdes = int(parts[0])
+			reswaste = int(parts[1])
+			woodwaste = int(parts[2])
+			
+			acresdes.append(acsdes)
+			resourcew.append(reswaste)
+			woodw.append(woodwaste)
+	
+	pyplot.scatter(acresdes, resourcew, woodw, range(0, len(countries)))
+	
+	for x in range(len(countries)):
+		pyplot.text(resourcew[x], woodw[x], countries[x], color = 'blue')
+	
+	pyplot.grid('on')
+	pyplot.xlabel('wood wasted')
+	pyplot.ylabel('resources wasted(excluding wood)')
+	pyplot.title('destruction is not production')
+	
+	
+	pyplot.show()
+
+	
+	
 '''
 	tmp =   #"current average temp:"
 	sol =   #"current average hours sun per day:"
