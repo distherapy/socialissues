@@ -17,5 +17,5 @@ this should also spotlight the primitive, depraved, and/or submissive human beha
 - not understanding that they trade your cheap labor with one another
 - not understanding that 'money' is the arbitrary unit your hour of cheap labor is worth to them
 - buying excess garbage that is not necessary existentially
-- wasteful travel(trips, modding verhicles, wasting energy)
+- wasteful travel(trips, modding vehicles, wasting energy)
 - fast food instead of growing food, mowing lawns instead of growing food
