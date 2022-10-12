@@ -1,5 +1,7 @@
 #!/usr/bin/env python
+
 from matplotlib import pyplot
+
 '''
 algorithms to solve these social issues:
 water,
@@ -7,6 +9,60 @@ food,
 shelter,
 '''
 
+def vym():
+	with open('/lumber.vym', 'r') as lvym:
+		pass
+	with open('/hazchem.vym', 'r') as hcvym:
+		pass
+	with open('/water.vym', 'r') as wvym:
+		pass
+	with open('/ag.vym', 'r') as avym:
+		pass
+	with open('/waste.vym', 'r') as wastevym:
+		pass
+vym()
+
+def lumber():
+
+	l = open("lumbercountries.txt")
+	countries = []
+	acresdes = []
+	resourcew = []
+	woodw = []
+	
+	done = False
+	while not done:
+		country = l.readline()
+		if country == "":
+			done = True
+		else:
+			line = l.readline()
+			countries.append(country)
+			parts = line.split()
+			
+			acsdes = int(parts[0])
+			reswaste = int(parts[1])
+			woodwaste = int(parts[2])
+			
+			acresdes.append(acsdes)
+			resourcew.append(reswaste)
+			woodw.append(woodwaste)
+	
+	pyplot.scatter(acresdes, resourcew, woodw, range(0, len(countries)))
+	
+	for x in range(len(countries)):
+		pyplot.text(resourcew[x], woodw[x], countries[x], color = 'blue')
+	
+	pyplot.grid('on')
+	pyplot.xlabel('wood wasted')
+	pyplot.ylabel('resources wasted(excluding wood)')
+	pyplot.title('destruction is not production')
+	
+	pyplot.show()
+
+lumber()	
+	
+		
 def water():
 	num_gal = 3 #num_gal water per day per person(to exist healthily[including washing, not just survive)
 	wastewater_untreated = 80/100 #returns to the ground this way
@@ -57,7 +113,7 @@ def water():
 	
 	with open('/water.xls', 'r') as wxls:
 		pass
-	
+water()	
 	
 def ag():
 	'''
@@ -81,6 +137,7 @@ def ag():
 	
 	with open('/ag.xls', 'r') as agxls:
 		pass
+ag()
 	
 def growth_humans():
 	num_births - num_deaths
@@ -95,9 +152,11 @@ def growth_humans():
 	
 	with open('/growth.xls', 'r') as gxls:
 		pass
+growth_humans()
 		
 def growth_other_species():
 	pass
+growth_other_species()
 	
 def housing():
 	restc = 2430000 #num_real_estate_businesses
@@ -113,6 +172,7 @@ def housing():
 	
 	with open('/housing.xls', 'r') as hxls:
 		pass
+housing()
 
 def waste():
 	plastic_byCountry = {'us':'92.5 Million Lbs.', : ,
@@ -126,48 +186,8 @@ def waste():
 	
 	with open('/waste.xls', 'r') as wastexls:
 		pass
+waste()
 
-def lumber():
-
-	l = open("lumbercountries.txt")
-	countries = []
-	acresdes = []
-	resourcew = []
-	woodw = []
-	
-	done = False
-	while not done:
-		country = l.readline()
-		if country == "":
-			done = True
-		else:
-			line = l.readline()
-			countries.append(country)
-			parts = line.split()
-			
-			acsdes = int(parts[0])
-			reswaste = int(parts[1])
-			woodwaste = int(parts[2])
-			
-			acresdes.append(acsdes)
-			resourcew.append(reswaste)
-			woodw.append(woodwaste)
-	
-	pyplot.scatter(acresdes, resourcew, woodw, range(0, len(countries)))
-	
-	for x in range(len(countries)):
-		pyplot.text(resourcew[x], woodw[x], countries[x], color = 'blue')
-	
-	pyplot.grid('on')
-	pyplot.xlabel('wood wasted')
-	pyplot.ylabel('resources wasted(excluding wood)')
-	pyplot.title('destruction is not production')
-	
-	
-	pyplot.show()
-
-	
-	
 '''
 	tmp =   #"current average temp:"
 	sol =   #"current average hours sun per day:"
