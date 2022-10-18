@@ -3,7 +3,7 @@
 from matplotlib import pyplot
 
 '''
-algorithms to solve these social issues:
+simple maths to solve these social issues:
 water,
 food,
 shelter,
