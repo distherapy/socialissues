@@ -7,7 +7,17 @@ simple maths to solve these social issues:
 water,
 food,
 shelter,
+medical,
+etc
 '''
+
+def shelter():
+	num_res = 141,580,000 #20% increase since 2000
+	sing_fam = num_res * .84
+	ownership_rate = num_res * .64
+	people_with_multiple_homes = ~10,000,000
+	num_com = 5,900,000 #56% increase since 1979
+	sq_ft = 97,000,000,000 #89% increase since 1979
 
 def vym():
 	with open('/lumber.vym', 'r') as lvym:
