@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 
 from matplotlib import pyplot
+import math
+import sympy as sp
+import numpy as np
+import pandas as pd
 
 '''
 simple maths to solve these social issues:
@@ -18,7 +22,7 @@ def shelter():
 	people_with_multiple_homes = ~10,000,000
 	num_com = 5,900,000 #56% increase since 1979
 	sq_ft = 97,000,000,000 #89% increase since 1979
-
+'''
 def vym():
 	with open('/lumber.vym', 'r') as lvym:
 		pass
@@ -31,44 +35,44 @@ def vym():
 	with open('/waste.vym', 'r') as wastevym:
 		pass
 vym()
-
+'''
 def lumber():
 
-	l = open("lumbercountries.txt")
-	countries = []
-	acresdes = []
-	resourcew = []
-	woodw = []
-	
-	done = False
-	while not done:
-		country = l.readline()
-		if country == "":
-			done = True
-		else:
-			line = l.readline()
-			countries.append(country)
-			parts = line.split()
-			
-			acsdes = int(parts[0])
-			reswaste = int(parts[1])
-			woodwaste = int(parts[2])
-			
-			acresdes.append(acsdes)
-			resourcew.append(reswaste)
-			woodw.append(woodwaste)
-	
-	pyplot.scatter(acresdes, resourcew, woodw, range(0, len(countries)))
-	
-	for x in range(len(countries)):
-		pyplot.text(resourcew[x], woodw[x], countries[x], color = 'blue')
-	
-	pyplot.grid('on')
-	pyplot.xlabel('wood wasted')
-	pyplot.ylabel('resources wasted(excluding wood)')
-	pyplot.title('destruction is not production')
-	
-	pyplot.show()
+	with open('lumber.xlsx', 'r') as l:
+		countries = []
+		acresdes = []
+		resourcew = []
+		woodw = []
+		
+		done = False
+		while not done:
+			country = l.readline()
+			if country == "":
+				done = True
+			else:
+				line = l.readline()
+				countries.append(country)
+				parts = line.split()
+				
+				acsdes = int(parts[0])
+				reswaste = int(parts[1])
+				woodwaste = int(parts[2])
+				
+				acresdes.append(acsdes)
+				resourcew.append(reswaste)
+				woodw.append(woodwaste)
+		
+		pyplot.scatter(acresdes, resourcew, woodw, range(0, len(countries)))
+		
+		for x in range(len(countries)):
+			pyplot.text(resourcew[x], woodw[x], countries[x], color = 'blue')
+		
+		pyplot.grid('on')
+		pyplot.xlabel('wood wasted')
+		pyplot.ylabel('resources wasted(excluding wood)')
+		pyplot.title('destruction is not production')
+		
+		pyplot.show()
 
 lumber()	
 	
@@ -98,9 +102,9 @@ def water():
 		'al':27.2, 'ak':27.8, 'az':28.7, 'ar': 30.4, 'ca':31.6, 'co':33.6, 'ct':35.9, 'de':38.5, 'fl':40.6, 'ga':42.4, 'hi':43.7, 'id':27.2, 'il':27.8, 'in':28.7, 'ia':30.4, 'ks':31.6, 'ky':33.6, 'la':35.9, 'me':38.5, 'md':40.6, 'ma':42.4, 'mi':43.7, 'mn':27.2, 'ms':27.8, 'mo':28.7, 'mt':30.4, 'ne':31.6, 'nv':33.6, 'nh':35.9, 'nj':38.5, 'nm':40.6, 'ny':42.4, 'nc':43.7, 'nd':27.2, 'oh':27.8, 'ok':28.7, 'or':30.4, 'pa':31.6, 'ri':33.6, 'sc':35.9, 'sd':38.5, 'tn':40.6, 'tx':42.4, 'ut':43.7, 'vt':27.2, 'va':27.8, 'wa':28.7, 'wv':30.4, 'wi':31.6, 'wy':33.6}
 		]
 		
-		brands = ["3 springs", "3300 artesian water", "365 spring water", "a. l. lee corporation natural spring water", "aafiya water", "aarp west virginia", "abita springs", "absopure distilled water", "absopure drinking water", "absopure natural spring water", "admiral dewey distilled water", "admiral dewey drinking water", "admiral dewey purified water", "adobe springs", "aguazul natural spring water", "alaska chill", "alaska glacier", "alaska glacier cap", "alaska glacierblend", "alaska natural spring water", "albion water", "alcatraz", "alhambra", "alps water", "amelia springs water", "angel fire", "apani", "appalachian springs water", "aquamantra", "aquafina", "aquoforce", "arbutus", "arctic mist", "arrowhead", "artesia", "av-02", "avita", "baccara", "bashas' artesian spring water", "belmont springs", "big bear mountain", "big indian", "bikers' coolant","black mountain spring water", "bonaqa", "brick house farm water", "calistoga mineral water", "calistoga mountain spring water", "calistoga spring water","carolina mountain spring water", "caroline mountain water", "carrabassett", "castle rock", "castle springs", "catskill mountains", "cerebellum h2o", "cherokee bottled water", "claire baie bottled water", "clear mountain", "clearly arctic", "climax ky", "cobb mountain natural spring water", "cole brothers", "colfax", "colorado crystal", "cool luc", "cool springs pure springwater", "country creek", "crystal geyser natural alpine spring water", "crystal geyser natural spring water", "crystal geyser water", "crystal springs", "dannon", "dasani","deep rock", "deep rock crystal drop", "deep rock fontenelle", "deer park maryland", "deer park pennsylvania", "diamond natural spring water", "distillata", "dog water", "drinka", "earth2o", "edins x.o.", "eldorado natural spring water", "english mountain", "evo premium water", "famous crazy natural mineral water", "famous natural deep well mineral water", "famous premium drinking water", "flo first liquid obsession", "food lion drinking water", "fountain natural spring water", "fountainhead", "franklin heritage", "georgia mountain water", "giant filtered drinking water", "giant springs", "glaceau smart water", "glaceau vitamin water", "glenwood inglewood", "grand springs", "great bear", "h2only", "halstead", "harris teeter natural spring water", "hawaii water", "hd2o", "hidden spring", "hillcrest spring water. inc.", "hinckley springs", "hinkley & schmidt", "ice mountain", "idaho ice", "indian hills spring water", "keeper springs", "kentwood springs", "kroger drinking water", "kroger spring water", "laure spring water", "lauré pristine spring water", "le-natures water", "leisure time", "lesage natural wells", "life o2", "loon county", "manitou mineral water", "marin county all natural", "mckenzie mist", "model on a bottle (tm)", "mount olympus", "mountain forest spring water", "mountaineer pure", "mt. mckinley clear", "naturalle mountain spring water", "noah's california spring water", "oasis", "odwalla", "original fountain of youth mineral water", "ozardar", "ozarka", "pagosa springs", "palomar mountain spring water", "panther creek", "paradise bottled water", "parley's canyon", "penta", "pine barrens", "pocono springs pure mountain spring water", "poland spring", "pristine peaks", "pure montana", "pure pride", "purely sedona", "purple parrot", "quibell", "rain", "rocky grove", "saegertown beverage eureka springs", "seven creeks spring water", "shenandoah spring water", "shivar springs", "sierra springs", "silver creek",  "snow valley mountain spring water", "snowbird", "snowline natural water", "sparkletts", "stoneclear springs", "sweet springs natural mountain water", "tennessee mountain pure spring water", "trinity springs", "triton purified drinking water", "utopia", "valentine's pure spring water", "valley of the moon", "vermont pure", "water boy", "west virginia's pride of the mountains", "whispering springs water", "whole foods market 365 distilled water", "whole foods market 365 italian sparkling mineral water", "whole foods market 365 spring water", "wissahickon mountain spring water", "yellowstone headwaters", "zephyrhills"]
+	brands = ["3 springs", "3300 artesian water", "365 spring water", "a. l. lee corporation natural spring water", "aafiya water", "aarp west virginia", "abita springs", "absopure distilled water", "absopure drinking water", "absopure natural spring water", "admiral dewey distilled water", "admiral dewey drinking water", "admiral dewey purified water", "adobe springs", "aguazul natural spring water", "alaska chill", "alaska glacier", "alaska glacier cap", "alaska glacierblend", "alaska natural spring water", "albion water", "alcatraz", "alhambra", "alps water", "amelia springs water", "angel fire", "apani", "appalachian springs water", "aquamantra", "aquafina", "aquoforce", "arbutus", "arctic mist", "arrowhead", "artesia", "av-02", "avita", "baccara", "bashas' artesian spring water", "belmont springs", "big bear mountain", "big indian", "bikers' coolant","black mountain spring water", "bonaqa", "brick house farm water", "calistoga mineral water", "calistoga mountain spring water", "calistoga spring water","carolina mountain spring water", "caroline mountain water", "carrabassett", "castle rock", "castle springs", "catskill mountains", "cerebellum h2o", "cherokee bottled water", "claire baie bottled water", "clear mountain", "clearly arctic", "climax ky", "cobb mountain natural spring water", "cole brothers", "colfax", "colorado crystal", "cool luc", "cool springs pure springwater", "country creek", "crystal geyser natural alpine spring water", "crystal geyser natural spring water", "crystal geyser water", "crystal springs", "dannon", "dasani","deep rock", "deep rock crystal drop", "deep rock fontenelle", "deer park maryland", "deer park pennsylvania", "diamond natural spring water", "distillata", "dog water", "drinka", "earth2o", "edins x.o.", "eldorado natural spring water", "english mountain", "evo premium water", "famous crazy natural mineral water", "famous natural deep well mineral water", "famous premium drinking water", "flo first liquid obsession", "food lion drinking water", "fountain natural spring water", "fountainhead", "franklin heritage", "georgia mountain water", "giant filtered drinking water", "giant springs", "glaceau smart water", "glaceau vitamin water", "glenwood inglewood", "grand springs", "great bear", "h2only", "halstead", "harris teeter natural spring water", "hawaii water", "hd2o", "hidden spring", "hillcrest spring water. inc.", "hinckley springs", "hinkley & schmidt", "ice mountain", "idaho ice", "indian hills spring water", "keeper springs", "kentwood springs", "kroger drinking water", "kroger spring water", "laure spring water", "lauré pristine spring water", "le-natures water", "leisure time", "lesage natural wells", "life o2", "loon county", "manitou mineral water", "marin county all natural", "mckenzie mist", "model on a bottle (tm)", "mount olympus", "mountain forest spring water", "mountaineer pure", "mt. mckinley clear", "naturalle mountain spring water", "noah's california spring water", "oasis", "odwalla", "original fountain of youth mineral water", "ozardar", "ozarka", "pagosa springs", "palomar mountain spring water", "panther creek", "paradise bottled water", "parley's canyon", "penta", "pine barrens", "pocono springs pure mountain spring water", "poland spring", "pristine peaks", "pure montana", "pure pride", "purely sedona", "purple parrot", "quibell", "rain", "rocky grove", "saegertown beverage eureka springs", "seven creeks spring water", "shenandoah spring water", "shivar springs", "sierra springs", "silver creek",  "snow valley mountain spring water", "snowbird", "snowline natural water", "sparkletts", "stoneclear springs", "sweet springs natural mountain water", "tennessee mountain pure spring water", "trinity springs", "triton purified drinking water", "utopia", "valentine's pure spring water", "valley of the moon", "vermont pure", "water boy", "west virginia's pride of the mountains", "whispering springs water", "whole foods market 365 distilled water", "whole foods market 365 italian sparkling mineral water", "whole foods market 365 spring water", "wissahickon mountain spring water", "yellowstone headwaters", "zephyrhills"]
 	
-		worldwide_sales = [{"wholesale":19400000000, "retail":34600000000}]
+	worldwide_sales = [{"wholesale":19400000000, "retail":34600000000}]
 
 	#precip_na
 	am_rpy = {	
@@ -140,7 +144,7 @@ def ag():
 	num_ac_am = 1274000000 #num_acres_frootable_land_am
 	num_ac_eu = 418000000 #num_acres_frootable_land_eu
 	num_ac_af = 2765109218 #num_acres_frootable_land_af
-	num_ac_as = #num_acres_frootable_land_as
+	num_ac_as = 4200791485#num_acres_frootable_land_as
 	num_ac_sa = 14105600000 #num_acres_frootable_land_sa
 	num_ac_au = 1055139978 #num_acres_frootable_land_au
 	num_cal_req = 3200 #num_calories(to exist healthily, not just survive)
@@ -151,14 +155,25 @@ ag()
 	
 def growth_humans():
 	num_births - num_deaths
-	num_hum = #num_people
-	num_fam = #num_familial_units
-	num_hum_am = #num_people_am
-	num_hum_eu = #num_people_eu
-	num_hum_af = #num_people_af
-	num_hum_as = #num_people_as
-	num_hum_sa = #num_people_sa
-	num_hum_au = #num_people_au
+	num_humneg5000 = 5000000
+	num_humneg500  = 100000000
+	num_hum600 =  200000000
+	num_hum1600 = 500000000
+	num_hum1804 = 1000000000
+	num_hum1850 = 1200000000
+	num_hum1900 = 1600000000
+	num_hum1927 = 2000000000
+	num_hum1960 = 3015470894
+	num_hum1980 = 4447606236
+	num_hum2000 = 6100000000
+	num_hum2020 = 7800000000
+	# num_fam = #num_familial_units
+	# num_hum_am = #num_people_am
+	# num_hum_eu = #num_people_eu
+	# num_hum_af = #num_people_af
+	# num_hum_as = #num_people_as
+	# num_hum_sa = #num_people_sa
+	# num_hum_au = #num_people_au
 	
 	with open('/growth.xls', 'r') as gxls:
 		pass
@@ -185,13 +200,13 @@ def housing():
 housing()
 
 def waste():
-	plastic_byCountry = {'us':'92.5 Million Lbs.', : ,
+	plastic_byCountry = {'us':'92.5 Million Lbs.',
 	}
-	plastic_byIndustry = {'packaging':'101412640.6 Million Lbs.', : ,
+	plastic_byIndustry = {'packaging':'101412640.6 Million Lbs.',
 	}
-	plastic_personDaily = {'us':'.7 Lbs.', : ,
+	plastic_personDaily = {'us':'.7 Lbs.',
 	}
-	sewage_byCountryDaily = {'us':'34 Billion Gal', : ,
+	sewage_byCountryDaily = {'us':'34 Billion Gal',
 	}
 	
 	with open('/waste.xls', 'r') as wastexls:
