@@ -6,15 +6,6 @@ import sympy as sp
 import numpy as np
 import pandas as pd
 
-'''
-simple maths to solve these social issues:
-water,
-food,
-shelter,
-medical,
-etc
-'''
-
 def shelter():
 	num_res = 141,580,000 #20% increase since 2000
 	sing_fam = num_res * .84
