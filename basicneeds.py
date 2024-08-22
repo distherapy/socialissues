@@ -2,7 +2,6 @@
 #
 from matplotlib import pyplot
 import math
-#import sympy as sp
 import numpy as np
 import pandas as pd
 
@@ -27,8 +26,6 @@ def shelter():
 	reso = 100/(88.4*resb) #res_prop_occupied
 	resv = 100/(11.6*resb) #res_prop_vacant [currently 16+ million]
 	
-	#with open('/housing.xls', 'r') as hxls:
-		#pass
 '''
 def vym():
 	with open('/lumber.vym', 'r') as lvym:
@@ -114,28 +111,23 @@ def water():
 	worldwide_sales = [{"wholesale":19400000000, "retail":34600000000}]
 	nestle_revenue2023 = 103984000000
 	water_bottles = 35000000000
-	#with open('/water.xls', 'r') as wxls:
-		#pass
+
 water()	
 	
 def ag():
 	'''
-	farming animals is a problem that can and SHOULD be avoided. if their suffering doesn't sway your pampered, entitled cheeks, then the exponential use and waste of food and water should.
+	Farming animals is a problem that can and SHOULD be avoided. If their suffering doesn't sway your pampered, entitled cheeks, then the exponential use and waste of food and water should:
 	'''
-	#precip_na
 	am_rpy = [{	
 	'al':56.27, 'ak':37.33, 'az':14.71, 'ar': 65.59, 'ca':29.1, 'co':18.86, 'ct':54.24, 'de':41.58, 'fl':52.02, 'ga':47.89, 'hi':70.0,'id':23.34, 'il':49.87, 'in':49.52, 'ia':41.63, 'ks':36.08, 'ky':61.28, 'la':61.9, 'me':49.94, 'md':42.63, 'ma':52.7, 'mi':41.79, 'mn':35.49, 'ms':68.06, 'mo':53.85, 'mt':21.41, 'ne':31.41, 'nv':13.77, 'nh':50.2, 'nj':51.89, 'nm':13.35, 'ny':48.18, 'nc':50.98, 'nd':24.34, 'oh':46.86, 'ok':44.94, 'or':30.01, 'pa':50.75, 'ri':57.13, 'sc':45.71, 'sd':31.42, 'tn':66.87, 'tx':26.87, 'ut':16.94, 'vt':51.41, 'va':46.0, 'wa':33.08, 'wv':48.24, 'wi':44.55, 'wy':18.29}]
 	
-	amk = am_rpy.values()
-	amt = sum(amk)
-	
-	# need to do the rest of the countries/territories
 	intl_rpy = [{
 	'ac':2.43, 'ad':31.98, 'ae':2.1, 'af': 17.01, 'ag':39.1, 'ai':34.86, 'al':54.24, 'am':9.8, 'ao':39.76, 'aq':2.01,'ar':23.26, 'as':113.38, 'at':43.7, 'au':21.02, 'aw':17.78, 'az':17.59}]	
 	
+	amk = am_rpy.values()
+	amt = sum(amk)
 	intlk = am_rpy.values()
-	intlt = sum(intlk)
-	
+	intlt = sum(intlk)	
 	tmp = 64  #"current average temp:"
 	sol = 13  #"current average hours sun per day:"
 	rpd = .13  #"current average rainfall per day:"
@@ -156,8 +148,6 @@ def ag():
 	num_ac_au = 1055139978 #num_acres_frootable_land_au
 	num_cal_req = 3200 #num_calories(to exist healthily, not just survive)
 	
-	#with open('/ag.xls', 'r') as agxls:
-		#pass
 	def growth_humans():
 		#num_births - num_deaths
 		num_humneg5000 = 5000000
@@ -179,9 +169,6 @@ def ag():
 		# num_hum_as = #num_people_as
 		# num_hum_sa = #num_people_sa
 		# num_hum_au = #num_people_au
-		
-		#with open('/growth.xls', 'r') as gxls:
-			#pass
 	growth_humans()
 		
 	def growth_other_species():
@@ -201,8 +188,6 @@ def waste():
 	sewage_byCountryDaily = {'us':'34 Billion Gal',
 	}
 	
-	#with open('/waste.xls', 'r') as wastexls:
-		#pass
 waste()
 
 
