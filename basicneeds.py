@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+#
 from matplotlib import pyplot
 import math
 import sympy as sp
@@ -7,12 +7,15 @@ import numpy as np
 import pandas as pd
 
 def shelter():
-	num_res = 141,580,000 #20% increase since 2000
+	num_res = 141580000 #20% increase since 2000
 	sing_fam = num_res * .84
 	ownership_rate = num_res * .64
-	people_with_multiple_homes = ~10,000,000
-	num_com = 5,900,000 #56% increase since 1979
-	sq_ft = 97,000,000,000 #89% increase since 1979
+	people_with_multiple_homes = ~10000000
+	num_com = 5900000 #56% increase since 1979
+	sq_ft = 97000000000 #89% increase since 1979
+	tires = 280000000 #annually 9 per second
+	plastic_bottles = 481600000000
+	water_bottles = 35000000000
 '''
 def vym():
 	with open('/lumber.vym', 'r') as lvym:
@@ -77,12 +80,12 @@ def water():
 	surface_dependent = 144000000
 	
 	bottles = [
-		#sizes
+		#cost bulk
 		{
-		'1oz':12.3, '6oz':12.3, '8oz':12.3, '10oz':12.3, '10.1oz':12.3, '11.15oz':12.3, '12oz':12.3, '14oz':12.3, '16oz':12.3, '16.9oz':12.3, '17oz':12.3, '18oz':12.3, '20oz':12.3, '23oz':12.3,'23.7oz':12.3, '25.3oz':12.3, '30.4oz':12.3, '33.8oz':12.3, '50.7oz':12.3, '101.4oz':12.3, '202.8oz':12.3, '676oz':12.3,'500mL':12.3, '600mL':12.3, '700mL':12.3, '1L':12.3, '1.5L':12.3, '1G':12.3, '5G':12.3},
-		#prices
+		'1oz':.035, '8oz':.53, '12oz':.49, '16.9oz':.21,  '20oz':.30, '32oz':0, '64oz':0,'1G':0, '5G':0},
+		#cost single
 		{
-		'1oz':12.3, '6oz':12.3, '8oz':12.3, '10oz':12.3, '10.1oz':12.3, '11.15oz':12.3, '12oz':12.3, '14oz':12.3, '16oz':12.3, '16.9oz':12.3, '17oz':12.3, '18oz':12.3, '20oz':12.3, '23oz':12.3,'23.7oz':12.3, '25.3oz':12.3, '30.4oz':12.3, '33.8oz':12.3, '50.7oz':12.3, '101.4oz':12.3, '202.8oz':12.3, '676oz':12.3,'500mL':12.3, '600mL':12.3, '700mL':12.3, '1L':12.3, '1.5L':12.3, '1G':12.3, '5G':12.3},
+		'1oz':0, '8oz':.79, '12oz':.99, '16.9oz':1.19,  '20oz':1.29, '32oz'2.29, '64oz':2.79,'1G':2.99, '5G':8.99},
 		
 		#per_capita
 		{	
@@ -115,7 +118,7 @@ def water():
 	
 	intlk = am_rpy.values()
 	intlt = sum(intlk)
-	
+	water_bottles = 35000000000
 	with open('/water.xls', 'r') as wxls:
 		pass
 water()	
